@@ -1,0 +1,25 @@
+\Processor(*)\% Processor Time
+\Processor(*)\% User Time
+\Processor(*)\% Privileged Time
+\Memory\Available MBytes
+\Memory\Pages/sec
+\Memory\Page Faults/sec
+\PhysicalDisk(*)\Current Disk Queue Length
+\PhysicalDisk(*)\% Disk Time
+\PhysicalDisk(*)\Avg. Disk Queue Length
+\PhysicalDisk(*)\Avg. Disk sec/Read
+\PhysicalDisk(*)\Avg. Disk sec/Write
+\System\Processor Queue Length
+\System\Processes
+\Network Interface(*)\Bytes Total/sec
+\Network Interface(*)\Output Queue Length
+\Network Interface(*)\Packets Received Errors
+\Process(*)\% Processor Time
+\Process(*)\Working Set
+\Process(*)\Private Bytes
+\Process(*)\Handle Count
+\Process(*)\IO Read Bytes/sec
+\Process(*)\IO Write Bytes/sec
+\.NET CLR Memory(*)\% Time in GC
+\.NET CLR Exceptions(*)\# of Exceps Thrown
+\.NET CLR Exceptions(*)\# of Exceps Thrown / sec

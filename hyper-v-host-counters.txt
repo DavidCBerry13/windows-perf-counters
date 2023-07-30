@@ -1,0 +1,15 @@
+\Hyper-V Hypervisor\Logical Processors
+\Hyper-V Hypervisor\Virtual Processors
+\Hyper-V Hypervisor\Total Pages
+\Hyper-V Hypervisor Logical Processor(*)\% Total Run Time
+\Hyper-V Hypervisor Virtual Processor(*)\% Total Run Time
+\Hyper-V Hypervisor Virtual Processor(*)\% Total Run Time
+\Hyper-V Hypervisor Root Virtual Processor(*)\% Guest Idle Time
+\Hyper-V Hypervisor Root Virtual Processor(*)\% Guest Run Time
+\Hyper-V Hypervisor Root Virtual Processor(*)\% Hypervisor Run Time
+\Hyper-V Hypervisor Root Virtual Processor(*)\% Total Run Time
+\Hyper-V Dynamic Memory Balancer(*)\Available Memory
+\Hyper-V Dynamic Memory Balancer(*)\System Current Pressure
+\Hyper-V Dynamic Memory Balancer(*)\Average Pressure
+\Hyper-V Dynamic Memory VM(*)\Guest Available Memory
+\Hyper-V Dynamic Memory VM(*)\Physical Memory
