@@ -6,13 +6,13 @@ This repo contains a collection of scripts for working with Windows Performance 
 
 Use the [typeperf](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/typeperf) command with the `-q` option to list all pf the performance counters on a machine.
 
-```cmd
+```bat
 typeperf -q
 ```
 
 It is usually easier to write all of the counters to a file so you can view/edit them with a text editor.  This can be easily done by using the `-o` flag and specifying an output file.
 
-```cmd
+```bat
 typeperf -q -o counter-list.txt
 ```
 
@@ -26,7 +26,7 @@ The following comamnd creates a data collector set named `Standard-Perf-Data`.
 
 ```cmd
 logman.exe create counter 
-    - n Standard-Perf-Data ^
+    -n Standard-Perf-Data ^
     -f bincirc ^
     -o c:\perflogs\Standard-Perf-Data
     -v mmddhhmm ^
@@ -47,12 +47,13 @@ logman.exe create counter
 
 It is often easier to specify the perf counters you want to capture in a text file rather than typing all of them on the command line.  This is done with the `-cf` option.  The file should contain one performance counter per line.
 
+This command also removes the `-v` flag so that if the counters restart, the data stays in the same file
+
 ```cmd
 logman.exe create counter 
-    - n Standard-Perf-Data ^
+    -n Standard-Perf-Data ^
     -f bincirc ^
     -o c:\perflogs\Standard-Perf-Data
-    -v mmddhhmm ^
     -max 250 ^
     -si 00:05:00 ^
     -cf standard-counters.txt   
@@ -67,7 +68,6 @@ logman.exe create counter
     - n Standard-Perf-Data ^
     -f bincirc ^
     -o c:\perflogs\Standard-Perf-Data
-    -v mmddhhmm ^
     -max 250 ^
     -si 00:01:00 ^
     -b <M/d/yyyy h:mm:ss[AM|PM]>
@@ -75,12 +75,24 @@ logman.exe create counter
     -cf standard-counters.txt   
 ```
 
+## Starting Perf Counters on System Startup
+
+The easiest way to do this is to use a Windows Scheduled Task at startup
+
+```powershell
+$Trigger = New-ScheduledTaskTrigger -AtStartup
+$User = "Administrator"
+$Action = New-ScheduledTaskAction -Execute "logman start Standard-Perf-Data"
+
+Register-ScheduledTask -TaskName "Start Perf Counters" -Trigger $Trigger -User $User -Action $Action
+```
+
 ## Converting a binary log file to CSV
 
-It is useful to collect the performance counters into a binary circular file as this is the most efficient format and the file can roll over itself.  But to bring into Excel, you want a CSV file.  Use the relog command to convert a binary (.blg) file to a CSV file as follows.
+It is useful to collect the performance counters into a binary circular file as this is the most efficient format and the file can roll over itself.  But to bring into Excel, you want a CSV file.  Use the [relog](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/relog) command to convert a binary (.blg) file to a CSV file as follows.
 
 ```cmd
-relog <binary-file-name> /o <csv-file-name>
+relog <binary-file-name> -f csv -o <csv-file-name>
 ```
 
 
