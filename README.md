@@ -82,7 +82,7 @@ The easiest way to do this is to use a Windows Scheduled Task at startup
 ```powershell
 $Trigger = New-ScheduledTaskTrigger -AtStartup
 $User = "Administrator"
-$Action = New-ScheduledTaskAction -Execute "logman start Standard-Perf-Data"
+$Action = New-ScheduledTaskAction -Execute "logman" -Argument "start Standard-Perf-Data"
 
 Register-ScheduledTask -TaskName "Start Perf Counters" -Trigger $Trigger -User $User -Action $Action
 ```
