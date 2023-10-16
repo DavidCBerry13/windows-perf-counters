@@ -135,7 +135,7 @@ logman query
 
 This will provide a list of the data collector sets and their status (running or stopped)
 
-![A screenshot showing the logman query command and its output showing the data collector sets on a system](images\logman-query-output.png)
+![A screenshot showing the logman query command and its output showing the data collector sets on a system](images/logman-query-output.png)
 
 ---
 
@@ -147,7 +147,7 @@ logman start system-performance
 
 The data collector set should now show as running in the output of `logman query`
 
-![A screenshot showing the logman start command and the system-performance counter set in a running state](images\logman-start-output.png)
+![A screenshot showing the logman start command and the system-performance counter set in a running state](images/logman-start-output.png)
 
 ---
 
