@@ -1,0 +1,14 @@
+\Processor Information(*)\% Processor Utility
+\Memory\Available MBytes
+\Memory\Pages/sec
+\Memory\Page Reads/sec
+\PhysicalDisk(*)\Current Disk Queue Length
+\PhysicalDisk(*)\% Disk Time
+\PhysicalDisk(*)\Avg. Disk Queue Length
+\PhysicalDisk(*)\Avg. Disk sec/Read
+\PhysicalDisk(*)\Avg. Disk sec/Write
+\System\Processor Queue Length
+\System\Processes
+\Network Interface(*)\Bytes Total/sec
+\Network Interface(*)\Output Queue Length
+\Network Interface(*)\Packets Received Errors

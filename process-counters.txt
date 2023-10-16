@@ -1,0 +1,9 @@
+\Process(*)\% Processor Time
+\Process(*)\ID Process
+\Process(*)\Working Set
+\Process(*)\Private Bytes
+\Process(*)\Handle Count
+\Process(*)\IO Read Bytes/sec
+\Process(*)\IO Write Bytes/sec
+\.NET CLR Memory(*)\% Time in GC
+\.NET CLR Exceptions(*)\# of Exceps Thrown / sec
